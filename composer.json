@@ -1,52 +1,53 @@
 {
-    "name": "khonik/asset-cdn",
-    "description": "Fork from https://github.com/arubacao/asset-cdn",
-    "keywords": [
-        "Laravel",
-        "CDN",
-        "Content Delivery Network",
-        "AWS Cloudfront"
-    ],
-    "homepage": "https://github.com/khorevnikita/asset-cdn",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Christopher Lass",
-            "homepage": "https://c-lass.com/"
-        }
-    ],
-    "require": {
-        "php": "^7.0|^8.0",
-        "laravel/framework": "~5.4|^6.0|^7.0|^8.0"
-    },
-    "require-dev": {
-        "league/flysystem-aws-s3-v3": "^1.0",
-        "mockery/mockery": "^1.0",
-        "orchestra/testbench": "~3.4|^4.0|^5.0|^6.0",
-        "phpunit/phpunit": "~5.7|~6.0|^7.0|^8.0",
-        "spatie/temporary-directory": "^1.1"
-    },
-    "autoload": {
-        "files": [
-            "src/helpers.php"
-        ],
-        "psr-4": {
-            "Arubacao\\AssetCdn\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Arubacao\\AssetCdn\\Test\\": "tests"
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Arubacao\\AssetCdn\\AssetCdnServiceProvider"
-            ]
-        }
+  "name": "khonik/asset-cdn",
+  "description": "Fork from https://github.com/arubacao/asset-cdn",
+  "keywords": [
+    "Laravel",
+    "CDN",
+    "Content Delivery Network",
+    "AWS Cloudfront"
+  ],
+  "minimum-stability": "dev",
+  "homepage": "https://github.com/khorevnikita/asset-cdn",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christopher Lass",
+      "homepage": "https://c-lass.com/"
     }
+  ],
+  "require": {
+    "php": "^7.0|^8.0",
+    "laravel/framework": "~5.4|^6.0|^7.0|^8.0"
+  },
+  "require-dev": {
+    "league/flysystem-aws-s3-v3": "^1.0",
+    "mockery/mockery": "^1.0",
+    "orchestra/testbench": "~3.4|^4.0|^5.0|^6.0",
+    "phpunit/phpunit": "~5.7|~6.0|^7.0|^8.0",
+    "spatie/temporary-directory": "^1.1"
+  },
+  "autoload": {
+    "files": [
+      "src/helpers.php"
+    ],
+    "psr-4": {
+      "Arubacao\\AssetCdn\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Arubacao\\AssetCdn\\Test\\": "tests"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Arubacao\\AssetCdn\\AssetCdnServiceProvider"
+      ]
+    }
+  }
 }
