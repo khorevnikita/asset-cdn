@@ -49,7 +49,7 @@ class SyncCommand extends BaseCommand
         $this->filesystemManager = $filesystemManager;
         $filesOnCdn = $this->filesystemManager
             ->disk($this->filesystem)
-            ->allFiles();
+            ->allFiles($config->get('asset-cdn.cdn_folder'));
         $localFiles = $finder->getFiles();
         $filesToDelete = $this->filesToDelete($filesOnCdn, $localFiles);
         $filesToSync = $this->filesToSync($filesOnCdn, $localFiles);

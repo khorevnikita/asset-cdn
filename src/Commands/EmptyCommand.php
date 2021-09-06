@@ -34,7 +34,7 @@ class EmptyCommand extends BaseCommand
         $filesystem = $config->get('asset-cdn.filesystem.disk');
         $filesOnCdn = $filesystemManager
             ->disk($filesystem)
-            ->allFiles();
+            ->allFiles($config->get('asset-cdn.cdn_folder'));
 
         if ($filesystemManager
             ->disk($filesystem)
