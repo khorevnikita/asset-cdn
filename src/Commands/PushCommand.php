@@ -37,10 +37,12 @@ class PushCommand extends BaseCommand
         $files = $finder->getFiles();
 
         foreach ($files as $file) {
+            $path = $file->getRelativePath();
+            $folder = $config->get('asset-cdn.cdn_folder');
             $bool = $filesystemManager
                 ->disk($config->get('asset-cdn.filesystem.disk'))
                 ->putFileAs(
-                    $file->getRelativePath(),
+                    "$folder/$path",
                     new File($file->getPathname()),
                     $file->getFilename(),
                     $config->get('asset-cdn.filesystem.options')

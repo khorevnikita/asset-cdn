@@ -55,10 +55,12 @@ class SyncCommand extends BaseCommand
         $filesToSync = $this->filesToSync($filesOnCdn, $localFiles);
 
         foreach ($filesToSync as $file) {
+            $path = $file->getRelativePath();
+            $folder = $config->get('asset-cdn.cdn_folder');
             $bool = $this->filesystemManager
                 ->disk($this->filesystem)
                 ->putFileAs(
-                    $file->getRelativePath(),
+                    "$folder/$path",
                     new File($file->getPathname()),
                     $file->getFilename(),
                     $config->get('asset-cdn.filesystem.options')
