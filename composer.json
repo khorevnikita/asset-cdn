@@ -1,13 +1,13 @@
 {
-    "name": "arubacao/asset-cdn",
-    "description": "Serve Laravel Assets from a Content Delivery Network (CDN)",
+    "name": "khonik/asset-cdn",
+    "description": "Fork from https://github.com/arubacao/asset-cdn",
     "keywords": [
         "Laravel",
         "CDN",
         "Content Delivery Network",
         "AWS Cloudfront"
     ],
-    "homepage": "https://github.com/arubacao/asset-cdn",
+    "homepage": "https://github.com/khorevnikita/asset-cdn",
     "license": "MIT",
     "authors": [
         {

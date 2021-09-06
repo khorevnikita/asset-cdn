@@ -38,7 +38,7 @@ $ php artisan asset-cdn:sync
 Install this package via composer:
 
 ```bash
-$ composer require arubacao/asset-cdn
+$ composer require khonik/asset-cdn
 ```
 
 Also register the service provider:  
